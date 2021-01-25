@@ -1,5 +1,7 @@
+# sample keyspace 
 create keyspace if not exists blog with replication = {'class': 'SimpleStrategy', 'replication_factor' : 1};
 
+# edge connection table to play a role of a closure table
 create table if not exists blog.edge_connection(
     device_ancestor_id text,
     session_id text,
